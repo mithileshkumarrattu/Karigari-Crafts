@@ -1,0 +1,158 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated modern Karigari Crafts color palette with enhanced contrast and vibrancy */
+  --heritage-gold: #f4c430;
+  --deep-teal: #0f2027;
+  --warm-brown: #8b4513;
+  --soft-cream: #fefefe;
+  --sunset-orange: #ff6b35;
+  --sage-green: #87a96b;
+  --warm-red: #dc143c;
+  --soft-blue: #4682b4;
+
+  /* Updated design tokens with modern color mapping */
+  --background: #fefefe;
+  --foreground: #0f2027;
+  --card: #ffffff;
+  --card-foreground: #0f2027;
+  --popover: #ffffff;
+  --popover-foreground: #0f2027;
+  --primary: #f4c430;
+  --primary-foreground: #0f2027;
+  --secondary: #f8f9fa;
+  --secondary-foreground: #0f2027;
+  --muted: #f1f3f4;
+  --muted-foreground: #6c757d;
+  --accent: #ff6b35;
+  --accent-foreground: #ffffff;
+  --destructive: #dc143c;
+  --destructive-foreground: #ffffff;
+  --border: #e9ecef;
+  --input: #f8f9fa;
+  --ring: #f4c430;
+  --chart-1: #f4c430;
+  --chart-2: #4682b4;
+  --chart-3: #87a96b;
+  --chart-4: #ff6b35;
+  --chart-5: #dc143c;
+  --radius: 0.75rem;
+  --sidebar: #fefefe;
+  --sidebar-foreground: #0f2027;
+  --sidebar-primary: #f4c430;
+  --sidebar-primary-foreground: #0f2027;
+  --sidebar-accent: #f8f9fa;
+  --sidebar-accent-foreground: #0f2027;
+  --sidebar-border: #e9ecef;
+  --sidebar-ring: #f4c430;
+}
+
+.dark {
+  /* Enhanced dark mode colors for better contrast */
+  --background: #0f2027;
+  --foreground: #fefefe;
+  --card: #1a2332;
+  --card-foreground: #fefefe;
+  --popover: #1a2332;
+  --popover-foreground: #fefefe;
+  --primary: #f4c430;
+  --primary-foreground: #0f2027;
+  --secondary: #2c3e50;
+  --secondary-foreground: #fefefe;
+  --muted: #34495e;
+  --muted-foreground: #bdc3c7;
+  --accent: #ff6b35;
+  --accent-foreground: #ffffff;
+  --destructive: #dc143c;
+  --destructive-foreground: #ffffff;
+  --border: #34495e;
+  --input: #2c3e50;
+  --ring: #f4c430;
+  --chart-1: #f4c430;
+  --chart-2: #4682b4;
+  --chart-3: #87a96b;
+  --chart-4: #ff6b35;
+  --chart-5: #dc143c;
+  --sidebar: #1a2332;
+  --sidebar-foreground: #fefefe;
+  --sidebar-primary: #f4c430;
+  --sidebar-primary-foreground: #0f2027;
+  --sidebar-accent: #2c3e50;
+  --sidebar-accent-foreground: #fefefe;
+  --sidebar-border: #34495e;
+  --sidebar-ring: #f4c430;
+}
+
+@theme inline {
+  /* Added custom color utilities for heritage palette */
+  --color-heritage-gold: var(--heritage-gold);
+  --color-deep-teal: var(--deep-teal);
+  --color-warm-brown: var(--warm-brown);
+  --color-soft-cream: var(--soft-cream);
+  --color-sunset-orange: var(--sunset-orange);
+  --color-sage-green: var(--sage-green);
+  --color-warm-red: var(--warm-red);
+  --color-soft-blue: var(--soft-blue);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Added typography styles for cultural storytelling */
+  .font-cultural {
+    font-family: "Crimson Text", serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
