@@ -5,7 +5,7 @@
 
 :root {
   /* Updated modern Karigari Crafts color palette with enhanced contrast and vibrancy */
-  --heritage-gold: #f4c430;
+  --heritage-gold: #b8860b;
   --deep-teal: #0f2027;
   --warm-brown: #8b4513;
   --soft-cream: #fefefe;
@@ -21,8 +21,8 @@
   --card-foreground: #0f2027;
   --popover: #ffffff;
   --popover-foreground: #0f2027;
-  --primary: #f4c430;
-  --primary-foreground: #0f2027;
+  --primary: #b8860b;
+  --primary-foreground: #ffffff;
   --secondary: #f8f9fa;
   --secondary-foreground: #0f2027;
   --muted: #f1f3f4;
@@ -33,8 +33,8 @@
   --destructive-foreground: #ffffff;
   --border: #e9ecef;
   --input: #f8f9fa;
-  --ring: #f4c430;
-  --chart-1: #f4c430;
+  --ring: #b8860b;
+  --chart-1: #b8860b;
   --chart-2: #4682b4;
   --chart-3: #87a96b;
   --chart-4: #ff6b35;
@@ -42,12 +42,12 @@
   --radius: 0.75rem;
   --sidebar: #fefefe;
   --sidebar-foreground: #0f2027;
-  --sidebar-primary: #f4c430;
-  --sidebar-primary-foreground: #0f2027;
+  --sidebar-primary: #b8860b;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #f8f9fa;
   --sidebar-accent-foreground: #0f2027;
   --sidebar-border: #e9ecef;
-  --sidebar-ring: #f4c430;
+  --sidebar-ring: #b8860b;
 }
 
 .dark {
@@ -58,8 +58,8 @@
   --card-foreground: #fefefe;
   --popover: #1a2332;
   --popover-foreground: #fefefe;
-  --primary: #f4c430;
-  --primary-foreground: #0f2027;
+  --primary: #b8860b;
+  --primary-foreground: #ffffff;
   --secondary: #2c3e50;
   --secondary-foreground: #fefefe;
   --muted: #34495e;
@@ -70,20 +70,20 @@
   --destructive-foreground: #ffffff;
   --border: #34495e;
   --input: #2c3e50;
-  --ring: #f4c430;
-  --chart-1: #f4c430;
+  --ring: #b8860b;
+  --chart-1: #b8860b;
   --chart-2: #4682b4;
   --chart-3: #87a96b;
   --chart-4: #ff6b35;
   --chart-5: #dc143c;
   --sidebar: #1a2332;
   --sidebar-foreground: #fefefe;
-  --sidebar-primary: #f4c430;
-  --sidebar-primary-foreground: #0f2027;
+  --sidebar-primary: #b8860b;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #2c3e50;
   --sidebar-accent-foreground: #fefefe;
   --sidebar-border: #34495e;
-  --sidebar-ring: #f4c430;
+  --sidebar-ring: #b8860b;
 }
 
 @theme inline {

@@ -4,13 +4,13 @@ import { getFirestore, type Firestore } from "firebase/firestore"
 import { getStorage, type FirebaseStorage } from "firebase/storage"
 
 const firebaseConfig = {
-  apiKey: "#######",
-  authDomain: "333",
-  projectId: "##",
-  storageBucket: "##33",
-  messagingSenderId: "##3",
-  appId: "1:6465fb1",
-  measurementId: "3333",
+  apiKey: "AIzaSyDqvc3cQ0EiKS-4UGhHcFeMopTUp-PElnI",
+  authDomain: "genai-hack-e7d19.firebaseapp.com",
+  projectId: "genai-hack-e7d19",
+  storageBucket: "genai-hack-e7d19.firebasestorage.app",
+  messagingSenderId: "646595904804",
+  appId: "1:646595904804:web:21ebc0da83fdbbfba5dfb1",
+  measurementId: "G-QZ2BEK3YMY",
 }
 
 // Initialize Firebase app with proper error handling

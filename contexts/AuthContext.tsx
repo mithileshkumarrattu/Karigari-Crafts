@@ -61,7 +61,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         try {
           const userDoc = await getDoc(doc(db, "users", user.uid))
           if (userDoc.exists()) {
-            setUserProfile(userDoc.data() as UserProfile)
+            const userData = userDoc.data() as UserProfile
+            setUserProfile(userData)
+            localStorage.setItem("userRole", userData.role)
           }
         } catch (error) {
           console.error("Error fetching user profile:", error)
@@ -69,6 +71,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       } else {
         setUser(null)
         setUserProfile(null)
+        localStorage.removeItem("userRole")
       }
       setLoading(false)
     })
@@ -78,7 +81,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signIn = async (email: string, password: string) => {
     const auth = getAuthInstance()
-    await signInWithEmailAndPassword(auth, email, password)
+    const result = await signInWithEmailAndPassword(auth, email, password)
+
+    const db = getDbInstance()
+    const userDoc = await getDoc(doc(db, "users", result.user.uid))
+    if (userDoc.exists()) {
+      const userData = userDoc.data() as UserProfile
+      localStorage.setItem("userRole", userData.role)
+    }
   }
 
   const signInWithGoogle = async () => {
@@ -99,6 +109,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         created_at: new Date(),
       }
       await setDoc(doc(db, "users", result.user.uid), userProfile)
+      localStorage.setItem("userRole", userProfile.role)
     }
   }
 
@@ -120,11 +131,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     await setDoc(doc(db, "users", user.uid), userProfile)
     setUserProfile(userProfile)
+
+    localStorage.setItem("userRole", userProfile.role)
   }
 
   const logout = async () => {
     const auth = getAuthInstance()
     await signOut(auth)
+    localStorage.removeItem("userRole")
   }
 
   const value = {
