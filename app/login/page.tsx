@@ -29,7 +29,12 @@ export default function LoginPage() {
 
     try {
       await signIn(email, password)
-      router.push("/dashboard")
+      const userRole = localStorage.getItem("userRole") || "buyer"
+      if (userRole === "artisan") {
+        router.push("/dashboard")
+      } else {
+        router.push("/")
+      }
     } catch (err: any) {
       setError(err.message || "Failed to sign in")
     } finally {
